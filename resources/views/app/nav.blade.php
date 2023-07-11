@@ -54,6 +54,34 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Teacher
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @foreach($teachers as $teacher)
+                                <a class="dropdown-item" href="{{ route('$teacher.show', $teacher->id) }}">
+                                    {{ $teacher->name }}
+                                </a>
+                            @endforeach
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Season
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            @foreach($seasons as $season)
+                                <a class="dropdown-item" href="{{ route('$season.show', $season->id) }}">
+                                    {{ $season->name }}
+                                </a>
+                            @endforeach
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
