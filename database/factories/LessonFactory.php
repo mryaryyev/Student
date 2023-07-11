@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\DB;
 
@@ -16,6 +17,7 @@ class LessonFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
+    {
 
         $season = DB::table('seasons')->inRandomOrder()->first();
         $course = DB::table('courses')->inRandomOrder()->first();

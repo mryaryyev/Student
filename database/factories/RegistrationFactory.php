@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Registration>
@@ -15,7 +17,7 @@ class RegistrationFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-
+    {
         $lesson = DB::table('lessons')->inRandomOrder()->first();
         $student = DB::table('students')->inRandomOrder()->first();
         return [

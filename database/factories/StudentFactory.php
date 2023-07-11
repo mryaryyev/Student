@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Student>
@@ -19,7 +21,6 @@ class StudentFactory extends Factory
         return [
             'name' => fake()->name,
             'surname' => fake()->lastName,
-            'birthday' => fake()->name,
             'gender' => fake()->randomElement(['male','female']),
             'dob' => fake()->date('Y-m-d', 'now')
         ];
